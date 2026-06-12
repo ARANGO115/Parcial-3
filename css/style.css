@@ -1,0 +1,18 @@
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo{
+    margin-top: 20px;
+}
+.parrafo{
+    width: 80%;
+}
+
+.card-text{
+    line-height: 2;
+}
