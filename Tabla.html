@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark">
+
+    <div class="container mt-5">
+
+        <h2 class="text-center text-white mb-4">Usuarios Registrados</h2>
+
+        <div class="table-responsive">
+
+            <table class="table table-dark table-striped table-bordered text-center align-middle">
+
+                <thead class="table-primary">
+
+                    <tr>
+                        <th>Primer Nombre</th>
+                        <th>Segundo Nombre</th>
+                        <th>Correo</th>
+                        <th>Ciudad</th>
+                        <th>Departamento</th>
+                        <th>Cédula</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaUsuarios">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        let tabla = document.getElementById("tablaUsuarios");
+
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

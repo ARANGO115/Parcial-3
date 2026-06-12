@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,94 +8,176 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <a class="navbar-brand fw-bold" href="#">
-            Home
-        </a>
+        <div class="container">
 
-        <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu">
+            <div class="container-logo">
+                <img class="logo" src="Imagenes/logo.avif" alt="">
+            </div>
 
-            <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
 
-        </button>
+                <span class="navbar-toggler-icon"></span>
 
-        <div class="collapse navbar-collapse" id="menu">
+            </button>
 
-            <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="menu">
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">
-                        Inicio
-                    </a>
-                </li>
+                <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Registro
-                    </a>
-                </li>
+                     <button class="boton-modal"  onclick="iniciar()">Inicio</button>
+                   
 
-            </ul>
+                    <button class="boton-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Registrarse
+                    </button>
+
+                    <button class="boton-modal"  onclick="ir()">Tabla</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">REGISTRO</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-4">
+                                            <label for="validationDefault01" id="nombre" class="form-label">Primer nombre</label>
+                                            <input type="text" class="form-control" id="validationDefault01" placeholder="Ejem:Jhoan">
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <label for="validationDefault02" id="nombre" class="form-label">Segundo nombre
+                                            <input type="text" class="form-control" id="validationDefault02" placeholder="Ejem: Andres">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationDefaultUsername" class="form-label">Correo electronico</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Ej :jhoan@gmail.com"
+                                                    aria-describedby="inputGroupPrepend2" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationDefault03" class="form-label">Ciudad</label>
+                                            <input type="text" class="form-control" id="validationDefault03" required placeholder="Mocoa">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="validationDefault04" class="form-label">Departamento</label>
+                                            <select class="form-select" id="validationDefault04" required>
+                                                <option selected disabled value="">Elegir...</option>
+                                                <option>Putumayo</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="validationDefault05" class="form-label">Cedula</label>
+                                            <input type="text" class="form-control" id="validationDefault05" required placeholder="1234567890">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="invalidCheck2" required>
+                                                <label class="form-check-label" for="invalidCheck2">
+                                                    Aceptar terminos y condiciones
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Salir</button>
+                                    <button type="button" class="btn btn-primary">Guardar cambios</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </ul>
+
+            </div>
 
         </div>
 
+    </nav>
+
+    <div class="encabezado">
+        <h1 class="titulo text-center">Bienvenido a esta maravillosa pagina</h1>
+
+        <p class="parrafo">"Toda gran historia comienza con un solo paso, y cada gran jugador necesita un mundo por
+            conquistar. Detrás de cada pixel hay un universo esperando ser descubierto: desde reinos olvidados hasta las
+            metrópolis del futuro. Lo que estás a punto de ver no son solo imágenes, son los escenarios de tus próximas
+            victorias. Observa con atención el arte que define nuestra era, elige el destino que quieres dominar y,
+            cuando estés listo, crea tu perfil para reclamar tu lugar en la tabla de clasificación. Tu viaje comienza
+            aquí."</p>
     </div>
 
-</nav>
-
-<div class="encabezado">
-<h1 class="titulo text-center">Bienvenido a esta maravillosa pagina</h1>
-
-<p class="parrafo">"Toda gran historia comienza con un solo paso, y cada gran jugador necesita un mundo por conquistar. Detrás de cada pixel hay un universo esperando ser descubierto: desde reinos olvidados hasta las metrópolis del futuro. Lo que estás a punto de ver no son solo imágenes, son los escenarios de tus próximas victorias. Observa con atención el arte que define nuestra era, elige el destino que quieres dominar y, cuando estés listo, crea tu perfil para reclamar tu lugar en la tabla de clasificación. Tu viaje comienza aquí."</p>
-</div>
-
-<div class="carta_god row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="Imagenes/img3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">God of war</h5>
-        <p class="card-text">Género: Acción y aventura mitológica. <br>
-             Trama: Un guerrero espartano enfrenta a dioses griegos y nórdicos en una violenta búsqueda de venganza y redención. <br>Estilo: Combates brutales, jefes colosales y narrativa cinematográfica profunda.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Última actualización hace 3 minutos</small>
-      </div>
+    <div class="cart-container row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="Imagenes/img3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">God of war</h5>
+                    <p class="card-text">Género: Acción y aventura mitológica. <br>
+                        Trama: Un guerrero espartano enfrenta a dioses griegos y nórdicos en una violenta búsqueda de
+                        venganza y redención. <br>Estilo: Combates brutales, jefes colosales y narrativa cinematográfica
+                        profunda.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="Imagenes/img2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Tom Clancy's The Division</h5>
+                    <p class="card-text">Género: Shooter táctico y RPG de acción en tercera persona.Trama: Un grupo de
+                        agentes durmientes se activa para restaurar el orden en una Nueva York colapsada por una
+                        pandemia letal.Estilo: Cooperativo en línea, gestión de equipo militar, combates urbanos
+                        realistas y facciones enemigas hostiles (como los "Limpiadores" de la imagen).</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="Imagenes/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Section 8</h5>
+                    <p class="card-text">Género: Disparos en primera persona (FPS) de ciencia ficción.Trama: Una unidad
+                        de infantería de élite con armaduras tecnológicas se despliega desde la órbita para defender
+                        colonias humanas de una facción rebelde.Estilo: Combates futuristas a gran escala,
+                        personalización de equipo y la capacidad de reaparecer cayendo directamente desde el cielo al
+                        campo de batalla.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Última actualización hace 3 minutos</small>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="Imagenes/img2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Género: Shooter táctico y RPG de acción en tercera persona.Trama: Un grupo de agentes durmientes se activa para restaurar el orden en una Nueva York colapsada por una pandemia letal.Estilo: Cooperativo en línea, gestión de equipo militar, combates urbanos realistas y facciones enemigas hostiles (como los "Limpiadores" de la imagen).</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Última actualización hace 3 minutos</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="Imagenes/img1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Género: Disparos en primera persona (FPS) de ciencia ficción.Trama: Una unidad de infantería de élite con armaduras tecnológicas se despliega desde la órbita para defender colonias humanas de una facción rebelde.Estilo: Combates futuristas a gran escala, personalización de equipo y la capacidad de reaparecer cayendo directamente desde el cielo al campo de batalla.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Última actualización hace 3 minutos</small>
-      </div>
-    </div>
-  </div>
-</div>  
-    
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-</html>
+
+</html> 
